@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting MTA - Planes y Precios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .plan-card.featured {
+            border: 3px solid #667eea;
+        }
+
+        .plan-card.featured::before {
+            content: "MÁS POPULAR";
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #667eea;
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+        }
+
+        .plan-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-period {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .plan-button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .plans-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="main-title">HOSTING CREATIVOS</div>
+            <h1>Hosting MTA - Planes y Precios</h1>
+            <p>Planes de hosting optimizados para servidores Multi Theft Auto</p>
+        </div>
+
+        <div class="plans-grid">
+            <!-- Plan Básico -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-name">Plan Básico</div>
+                    <div class="plan-price">$9.99</div>
+                    <div class="plan-period">por mes</div>
+                </div>
+                <ul class="plan-features">
+                    <li>1 GB RAM</li>
+                    <li>10 GB SSD</li>
+                    <li>50 slots de jugadores</li>
+                    <li>Soporte básico</li>
+                    <li>Panel de control</li>
+                    <li>Backups semanales</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+
+            <!-- Plan Pro -->
+            <div class="plan-card featured">
+                <div class="plan-header">
+                    <div class="plan-name">Plan Pro</div>
+                    <div class="plan-price">$19.99</div>
+                    <div class="plan-period">por mes</div>
+                </div>
+                <ul class="plan-features">
+                    <li>4 GB RAM</li>
+                    <li>50 GB SSD</li>
+                    <li>200 slots de jugadores</li>
+                    <li>Soporte prioritario</li>
+                    <li>Panel de control avanzado</li>
+                    <li>Backups diarios</li>
+                    <li>MySQL incluida</li>
+                    <li>FTP/SFTP acceso</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+
+            <!-- Plan Premium -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-name">Plan Premium</div>
+                    <div class="plan-price">$39.99</div>
+                    <div class="plan-period">por mes</div>
+                </div>
+                <ul class="plan-features">
+                    <li>8 GB RAM</li>
+                    <li>150 GB SSD</li>
+                    <li>500 slots de jugadores</li>
+                    <li>Soporte 24/7</li>
+                    <li>Panel personalizado</li>
+                    <li>Backups automáticos</li>
+                    <li>MySQL optimizada</li>
+                    <li>CDN incluido</li>
+                    <li>DDoS Protection</li>
+                    <li>Servidor dedicado</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+
+            <!-- Plan Enterprise -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-name">Plan Enterprise</div>
+                    <div class="plan-price">$79.99</div>
+                    <div class="plan-period">por mes</div>
+                </div>
+                <ul class="plan-features">
+                    <li>16 GB RAM</li>
+                    <li>500 GB SSD</li>
+                    <li>1000+ slots</li>
+                    <li>Soporte dedicado</li>
+                    <li>Configuración personalizada</li>
+                    <li>Backups en tiempo real</li>
+                    <li>Múltiples bases de datos</li>
+                    <li>Load balancer</li>
+                    <li>Monitoreo avanzado</li>
+                    <li>API completa</li>
+                    <li>Servidor exclusivo</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

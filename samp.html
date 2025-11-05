@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Creativos - SAMP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .plan-card.featured {
+            border: 3px solid #764ba2;
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #764ba2;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transform: rotate(45deg);
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .plan-period {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .plan-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HOSTING CREATIVOS</h1>
+            <h2>HOSTING PARA SAMP - PLANES Y PRECIOS</h2>
+        </div>
+
+        <div class="plans-container">
+            <div class="plan-card">
+                <div class="plan-name">BÁSICO</div>
+                <div class="plan-price">$9.99</div>
+                <div class="plan-period">/mes</div>
+                <ul class="features">
+                    <li>100 Slots</li>
+                    <li>2GB RAM</li>
+                    <li>20GB SSD</li>
+                    <li>Soporte 24/7</li>
+                    <li>Panel de Control</li>
+                    <li>Backup Diario</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="plan-badge">Popular</div>
+                <div class="plan-name">PROFESIONAL</div>
+                <div class="plan-price">$19.99</div>
+                <div class="plan-period">/mes</div>
+                <ul class="features">
+                    <li>300 Slots</li>
+                    <li>4GB RAM</li>
+                    <li>50GB SSD</li>
+                    <li>Soporte Prioritario</li>
+                    <li>Panel Avanzado</li>
+                    <li>Backup Automático</li>
+                    <li>Plugins Incluidos</li>
+                    <li>MySQL Database</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-name">PREMIUM</div>
+                <div class="plan-price">$39.99</div>
+                <div class="plan-period">/mes</div>
+                <ul class="features">
+                    <li>500 Slots</li>
+                    <li>8GB RAM</li>
+                    <li>100GB SSD</li>
+                    <li>Soporte VIP</li>
+                    <li>Panel Personalizado</li>
+                    <li>Backup en Tiempo Real</li>
+                    <li>Todos los Plugins</li>
+                    <li>Bases de Datos Ilimitadas</li>
+                    <li>Servidor Dedicado</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

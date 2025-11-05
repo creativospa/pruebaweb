@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Creativos - FiveM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .plan {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .plan:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan.featured {
+            border: 3px solid #ff6b6b;
+            position: relative;
+        }
+        
+        .plan.featured::before {
+            content: "MÁS POPULAR";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .plan-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 2.5rem;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .plan-period {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .plan-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HOSTING CREATIVOS</h1>
+            <h2>HOSTING PARA FIVEM - PLANES Y PRECIOS</h2>
+        </div>
+        
+        <div class="plans-container">
+            <div class="plan">
+                <div class="plan-name">Básico</div>
+                <div class="plan-price">$9.99</div>
+                <div class="plan-period">por mes</div>
+                <ul class="plan-features">
+                    <li>32 Slots</li>
+                    <li>4GB RAM</li>
+                    <li>50GB SSD</li>
+                    <li>Soporte 24/7</li>
+                    <li>Anti-DDoS</li>
+                    <li>Panel de Control</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+            
+            <div class="plan featured">
+                <div class="plan-name">Profesional</div>
+                <div class="plan-price">$19.99</div>
+                <div class="plan-period">por mes</div>
+                <ul class="plan-features">
+                    <li>64 Slots</li>
+                    <li>8GB RAM</li>
+                    <li>100GB SSD</li>
+                    <li>Soporte Prioritario 24/7</li>
+                    <li>Anti-DDoS Avanzado</li>
+                    <li>Panel de Control</li>
+                    <li>Base de Datos MySQL</li>
+                    <li>Backups Automáticos</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+            
+            <div class="plan">
+                <div class="plan-name">Empresarial</div>
+                <div class="plan-price">$39.99</div>
+                <div class="plan-period">por mes</div>
+                <ul class="plan-features">
+                    <li>128 Slots</li>
+                    <li>16GB RAM</li>
+                    <li>200GB SSD</li>
+                    <li>Soporte VIP 24/7</li>
+                    <li>Anti-DDoS Premium</li>
+                    <li>Panel de Control Avanzado</li>
+                    <li>Base de Datos MySQL</li>
+                    <li>Backups Diarios</li>
+                    <li>IP Dedicada</li>
+                    <li>Configuración Personalizada</li>
+                </ul>
+                <button class="plan-button">Contratar Ahora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
